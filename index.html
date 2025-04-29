@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Roast your CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+<!-- Include PDF.js and Tesseract.js -->
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.1/dist/tesseract.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+  <div class="main-wrapper">
+    <header>
+      <h1>Roast your CV</h1>
+
+    </header>
+
+    <section class="card upload-card">
+      <h2>Upload Your Resume</h2>
+      <p class="instruction">Accepted formats: PDF, DOCX</p>
+
+      <div class="upload-area" id="uploadArea">
+        <p id="uploadText">Drag & Drop your file or Click to Select</p>
+        <input type="file" id="cvInput" accept=".pdf,.docx" hidden />
+      </div>
+
+      <div id="fileName" class="file-name"></div>
+
+      <button onclick="uploadCV()">Roast Now</button>
+    </section>
+
+
+    <div id="responseContainer" class="card response-card">
+
+      <div id="skeletonLoader" class="skeleton-loader">
+        <div class="skeleton" style="width: 70%"></div>
+        <div class="skeleton" style="width: 50%"></div>
+        <div class="skeleton" style="width: 90%"></div>
+        <div class="skeleton" style="width: 60%"></div>
+
+
+      </div>
+    </div>
+
+
+  </div> 
+ 
+  <!-- <div class="main-wrapper">
+    <header>
+        <h1>Upload & Roast your CV</h1>
+    </header>
+
+    <section class="card upload-card">
+        <h2>Upload Your Resume</h2>
+
+        <p class="instruction">Accepted formats: PDF, DOCX</p>
+        <input type="file" id="cvInput" accept=".pdf,.docx" />
+        <button onclick="uploadCV()">Roast Now</button>
+    </section>
+
+    <div id="responseContainer" class="card response-card">
+        <div id="skeletonLoader" class="skeleton-loader">
+            <div class="skeleton" style="width: 70%"></div>
+            <div class="skeleton" style="width: 50%"></div>
+            <div class="skeleton" style="width: 90%"></div>
+            <div class="skeleton" style="width: 60%"></div>
+        </div>
+    </div>
+</div> -->
+ 
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
